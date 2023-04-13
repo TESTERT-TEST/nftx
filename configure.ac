@@ -19,7 +19,7 @@ dnl komodo codebase version
 define(_KOMODO_VERSION, 60000)
 
 dnl nftx codebase version
-define(_NFTX_VERSION, 30300)
+define(_NFTX_VERSION, 30400)
 
 AC_DEFINE(KOMODO_VERSION, _KOMODO_VERSION, [Komodo Version])
 AC_DEFINE(NFTX_VERSION, _NFTX_VERSION, [NFTX Version])

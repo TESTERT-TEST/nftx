@@ -1,6 +1,6 @@
 ![NFTX Header](https://github.com/nftx-sergei/nftx/blob/main/doc/logo-nftx.png "NFTX Header")
 
-## NFTX Alysides
+## NFTX core
 This repository hosts the NFTX core blockchain software that is required to host all Komodo-based blockchains used by the [NFTX Platform](https://nftx.pw/).
 
 

@@ -63,7 +63,7 @@ using namespace std;
 
 // #define KOMODO_VERSION "0.6.1"  // see komodo_version.h
 #define VERUS_VERSION "0.4.0g"
-// see also ALYSIDES_VERSION in komodo_version.h
+// see also NFTX_VERSION in komodo_version.h
 
 int32_t getera(int timestamp)
 {
@@ -214,9 +214,8 @@ UniValue getinfo(const UniValue& params, bool fHelp, const CPubKey& mypk)
     obj.push_back(Pair("version", CLIENT_VERSION));
     obj.push_back(Pair("protocolversion", PROTOCOL_VERSION));
     obj.push_back(Pair("KMDversion", FormatVersion(KOMODO_VERSION)));
-    obj.push_back(Pair("AlysidesVersion", FormatVersion(ALYSIDES_VERSION)));
+    obj.push_back(Pair("NFTXVersion", FormatVersion(NFTX_VERSION)));
     obj.push_back(Pair("synced", KOMODO_INSYNC!=0));
-    //obj.push_back(Pair("VRSCversion", VERUS_VERSION));
     obj.push_back(Pair("notarized", notarized_height));
     obj.push_back(Pair("prevMoMheight", prevMoMheight));
     obj.push_back(Pair("notarizedhash", notarized_hash.ToString()));

@@ -1,5 +1,18 @@
 ![NFTX Header](https://github.com/nftx-sergei/nftx/blob/main/doc/logo-nftx.png "NFTX Header")
 
+
+## NFTX Resources
+- NFTX Website: [https://nftx.pw](https://nftx.pw)
+- NFTX Explorer: [Invitation](https://explorer.nftx.pw)
+- NFTX Email: [support@nftx.pw](mailto:support@nftx.pw)
+
+## NFTX Blockchain Specifics
+
+- Block Time: 60 seconds
+- Starting Block Reward: 1 NFTX
+- Mining : 50% PoW |50% PoS
+- Mining Algorithm: Equihash 200,9
+
 ## NFTX core
 This repository hosts the NFTX core blockchain software that is required to host all Komodo-based blockchains used by the [NFTX Platform](https://nftx.pw/).
 
@@ -129,8 +142,6 @@ cd ~/nftx/src
 
 You are now ready to use the NFTX software to its fullest extent.
 
-## NFTX Resources
-- NFTX Website: [https://nftx.pw](https://nftx.pw)
 
 
 

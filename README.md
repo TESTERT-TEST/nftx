@@ -16,7 +16,6 @@
 ## NFTX core
 This repository hosts the NFTX core blockchain software that is required to host all Komodo-based blockchains used by the [NFTX Platform](https://nftx.pw/).
 
-
 NFTX is powered by the [Komodo Platform](https://komodoplatform.com/en), and contains code enhancements from the [Tokel Platform](https://github.com/TokelPlatform/tokel).
 
 ## List of NFTX Technologies

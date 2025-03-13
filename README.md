@@ -1,6 +1,5 @@
 ![NFTX Header](https://github.com/nftx-sergei/nftx/blob/main/doc/logo-nftx.png "NFTX Header")
 
-
 ## NFTX Resources
 - NFTX Website: [https://nftx.pw](https://nftx.pw)
 - NFTX Explorer: [Invitation](https://explorer.nftx.pw)

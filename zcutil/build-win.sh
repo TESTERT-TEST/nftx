@@ -29,9 +29,9 @@ cd $BASE_DIR
 
 ./autogen.sh
 CONFIG_SITE=$BASE_DIR/depends/$HOST/share/config.site CXXFLAGS="-DPTW32_STATIC_LIB -DCURL_STATICLIB -DCURVE_ALT_BN128 -fopenmp -pthread" ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared "$WEBSOCKETS_ARG" \
-  --with-custom-bin=yes CUSTOM_BIN_NAME=nftx CUSTOM_BRAND_NAME=NFTX \
-  CUSTOM_SERVER_ARGS="'-ac_name=NFTX -ac_supply=0 -ac_reward=100000000 -ac_halving=72000 -ac_adaptivepow=6 -ac_cc=111 -ac_staked=50 -addnode=node.nftx.pw -addnode=node1.nftx.pw -addnode=node2.nftx.pw -addnode=node3.nftx.pw -addnode=node4.nftx.pw -addnode=node5.nftx.pw -addnode=electrum.nftx.pw -addnode=electrum2.nftx.pw -addnode=electrum3.nftx.pw -nspv_msg=1'" \
-  CUSTOM_CLIENT_ARGS='-ac_name=NFTX'
+  --with-custom-bin=yes CUSTOM_BIN_NAME=dark CUSTOM_BRAND_NAME=DARK \
+  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=10 -ac_reward=100000000 -ac_blocktime=10 -ac_adaptivepow=6 -ac_cbmaturity=3 -ac_staked=30 -ac_sapling=1 -ac_pubkey=02bc214419546d69a05407b14eba7a2b44b8bc26821117f6c16016e6ce22cab033 -addnode=89.111.170.235'" \
+  CUSTOM_CLIENT_ARGS='-ac_name=DARK'
 sed -i 's/-lboost_system-mt /-lboost_system-mt-s /' configure 
   
 cd src/

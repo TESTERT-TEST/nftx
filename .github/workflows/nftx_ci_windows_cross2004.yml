@@ -32,7 +32,7 @@ jobs:
           ./zcutil/build-win.sh -j$(nproc)
           zip --junk-paths nftx-win src/nftxd.exe src/nftx-cli.exe
       - name: Upload nftx-win.zip as artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: nftx-win
           path: ./nftx-win.zip

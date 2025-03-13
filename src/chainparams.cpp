@@ -182,7 +182,7 @@ public:
 
         // TODO: we need more seed crawlers from other community members
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,30);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,188);
         base58Prefixes[CRYPTOCONDITION_ADDRESS] =     std::vector<unsigned char>(1,0x1c);

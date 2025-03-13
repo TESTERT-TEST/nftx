@@ -40,9 +40,9 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           ./zcutil/build.sh -j$(nproc)
-          zip --junk-paths nftx-linux src/nftxd src/nftx-cli
-      - name: Upload nftx-linux.zip as artifact
+          zip --junk-paths dark-linux src/darkd src/dark-cli
+      - name: Upload dark-linux.zip as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nftx-linux
-          path: ./nftx-linux.zip
+          name: dark-linux
+          path: ./dark-linux.zip

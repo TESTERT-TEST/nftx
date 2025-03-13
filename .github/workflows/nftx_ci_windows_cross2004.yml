@@ -30,9 +30,9 @@ jobs:
       - name: Build (Windows)
         run: |
           ./zcutil/build-win.sh -j$(nproc)
-          zip --junk-paths nftx-win src/nftxd.exe src/nftx-cli.exe
-      - name: Upload nftx-win.zip as artifact
+          zip --junk-paths dark-win src/darkd.exe src/dark-cli.exe
+      - name: Upload dark-win.zip as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nftx-win
-          path: ./nftx-win.zip
+          name: dark-win
+          path: ./dark-win.zip

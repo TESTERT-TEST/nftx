@@ -1963,7 +1963,7 @@ void komodo_args(char *argv0)
             fprintf(stderr,"can only have one of -ac_beam or -ac_coda\n");
             StartShutdown();
         }
-        ASSETCHAINS_SELFIMPORT = GetArg("-ac_import",""); // BEAM, CODA, PUBKEY, GATEWAY
+        ASSETCHAINS_SELFIMPORT = GetArg("-ac_import","PUBKEY"); // BEAM, CODA, PUBKEY, GATEWAY
         if ( ASSETCHAINS_SELFIMPORT == "PUBKEY" )
         {
             if ( strlen(ASSETCHAINS_OVERRIDE_PUBKEY.c_str()) != 66 )

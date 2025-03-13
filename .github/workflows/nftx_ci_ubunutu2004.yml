@@ -42,7 +42,7 @@ jobs:
           ./zcutil/build.sh -j$(nproc)
           zip --junk-paths nftx-linux src/nftxd src/nftx-cli
       - name: Upload nftx-linux.zip as artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: nftx-linux
           path: ./nftx-linux.zip

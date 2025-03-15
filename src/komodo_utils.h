@@ -1968,7 +1968,7 @@ void komodo_args(char *argv0)
         {
             if ( strlen(ASSETCHAINS_OVERRIDE_PUBKEY.c_str()) != 66 )
             {
-                fprintf(stderr,"invalid -ac_pubkey for -ac_import=PUBKEY\n");
+                fprintf(stderr,"invalid \n");
                 StartShutdown();
             }
         }
@@ -1976,7 +1976,7 @@ void komodo_args(char *argv0)
         {
             if (ASSETCHAINS_BEAMPORT == 0)
             {
-                fprintf(stderr,"missing -ac_beam for BEAM rpcport\n");
+                fprintf(stderr,"missing \n");
                 StartShutdown();
             }
         }
@@ -1984,7 +1984,7 @@ void komodo_args(char *argv0)
         {
             if (ASSETCHAINS_CODAPORT == 0)
             {
-                fprintf(stderr,"missing -ac_coda for CODA rpcport\n");
+                fprintf(stderr,"missing \n");
                 StartShutdown();
             }
         }
@@ -2145,9 +2145,7 @@ void komodo_args(char *argv0)
             if ( ASSETCHAINS_SELFIMPORT.size() > 0 )
             {
                 memcpy(&extraptr[extralen],(char *)ASSETCHAINS_SELFIMPORT.c_str(),ASSETCHAINS_SELFIMPORT.size());
-                for (i=0; i<ASSETCHAINS_SELFIMPORT.size(); i++)
-                    fprintf(stderr,"%c",extraptr[extralen+i]);
-                fprintf(stderr," selfimport\n");
+
                 extralen += ASSETCHAINS_SELFIMPORT.size();
             }
             if ( ASSETCHAINS_BEAMPORT != 0 )

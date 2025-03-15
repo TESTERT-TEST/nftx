@@ -1,6 +1,6 @@
 # we are using separate workflow because CI producing test binaries with CPPFLAGS=-DTESTMODE
 
-name: NFTX cli build - Windows cross compile 20.04
+name: DARK cli build - Windows cross compile 20.04
 
 
 on:

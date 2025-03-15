@@ -72,8 +72,8 @@ make "$@" -C ./depends/ V=1 NO_QT=1 NO_PROTON=1
 CPPFLAGS="-I$PREFIX/include -arch x86_64" LDFLAGS="-L$PREFIX/lib -arch x86_64 -Wl,-no_pie" \
 CXXFLAGS="-arch x86_64 -I/usr/local/Cellar/gcc\@8/8.3.0/include/c++/8.3.0/ -fwrapv -fno-strict-aliasing -Wno-builtin-declaration-mismatch -Werror -Wno-error=attributes -g -Wl,-undefined -Wl,dynamic_lookup" \
 ./configure --prefix="${PREFIX}" --with-gui=no "$HARDENING_ARG" "$LCOV_ARG" "$CONFIGURE_FLAGS" "$WEBSOCKETS_ARG"  "$DEBUGGING_ARG" \
-  --with-custom-bin=yes CUSTOM_BIN_NAME=nftx CUSTOM_BRAND_NAME=NFTX \
-  CUSTOM_SERVER_ARGS="'-ac_name=NFTX -ac_supply=0 -ac_reward=100000000 -ac_halving=72000 -ac_adaptivepow=6 -ac_cc=111 -ac_staked=50 -addnode=node.nftx.pw -addnode=node1.nftx.pw -addnode=node2.nftx.pw -addnode=node3.nftx.pw -addnode=node4.nftx.pw -addnode=node5.nftx.pw -addnode=electrum.nftx.pw -addnode=electrum2.nftx.pw -addnode=electrum3.nftx.pw -nspv_msg=1'" \
-  CUSTOM_CLIENT_ARGS='-ac_name=NFTX'
+  --with-custom-bin=yes CUSTOM_BIN_NAME=dark CUSTOM_BRAND_NAME=DARK \
+  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=0 -ac_reward=100000000 -ac_halving=72000 -ac_adaptivepow=6 -ac_cc=111 -ac_staked=50 -addnode=node.dark.pw -addnode=node1.dark.pw -addnode=node2.dark.pw -addnode=node3.dark.pw -addnode=node4.dark.pw -addnode=node5.dark.pw -addnode=electrum.dark.pw -addnode=electrum2.dark.pw -addnode=electrum3.dark.pw -nspv_msg=1'" \
+  CUSTOM_CLIENT_ARGS='-ac_name=DARK'
 
 make "$@" V=1 NO_GTEST=1 STATIC=1 

@@ -163,8 +163,8 @@ doc/man/Makefile.in
 src/Makefile.in
 src/cc/customcc.so
 src/libcc.so
-src/nftx-cli
+src/dark-cli
 src/komodo-test-cc
-src/nftxd
+src/darkd
 src/tokel-cli
 src/tokeld

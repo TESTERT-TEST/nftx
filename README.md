@@ -1,23 +1,23 @@
-![NFTX Header](https://github.com/nftx-sergei/nftx/blob/main/doc/logo-nftx.png "NFTX Header")
+![DARK Header](https://github.com/dark-sergei/dark/blob/main/doc/logo-dark.png "DARK Header")
 
-## NFTX Resources
-- NFTX Website: [https://nftx.pw](https://nftx.pw)
-- NFTX Explorer: [Invitation](https://explorer.nftx.pw)
-- NFTX Email: [support@nftx.pw](mailto:support@nftx.pw)
+## DARK Resources
+- DARK Website: [https://dark.pw](https://dark.pw)
+- DARK Explorer: [Invitation](https://explorer.dark.pw)
+- DARK Email: [support@dark.pw](mailto:support@dark.pw)
 
-## NFTX Blockchain Specifics
+## DARK Blockchain Specifics
 
 - Block Time: 60 seconds
-- Starting Block Reward: 1 NFTX
+- Starting Block Reward: 1 DARK
 - Mining : 50% PoW |50% PoS
 - Mining Algorithm: Equihash 200,9
 
-## NFTX core
-This repository hosts the NFTX core blockchain software that is required to host all Komodo-based blockchains used by the [NFTX Platform](https://nftx.pw/).
+## DARK core
+This repository hosts the DARK core blockchain software that is required to host all Komodo-based blockchains used by the [DARK Platform](https://dark.pw/).
 
-NFTX is powered by the [Komodo Platform](https://komodoplatform.com/en), and contains code enhancements from the [Tokel Platform](https://github.com/TokelPlatform/tokel).
+DARK is powered by the [Komodo Platform](https://komodoplatform.com/en), and contains code enhancements from the [Tokel Platform](https://github.com/TokelPlatform/tokel).
 
-## List of NFTX Technologies
+## List of DARK Technologies
 - All technologies from the main Komodo Platform codebase, such as:
   - Delayed Proof of Work (dPoW) - Additional security layer and Komodo's own consensus algorithm
   - zk-SNARKs - Komodo Platform's privacy technology for shielded transactions (however, it is unused and inaccessible in any of Vleppo's chains)
@@ -37,8 +37,8 @@ sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoco
 
 #### Linux
 ```shell
-git clone https://github.com/nftx-sergei/nftx --branch main --single-branch
-cd nftx
+git clone https://github.com/dark-sergei/dark --branch main --single-branch
+cd dark
 ./zcutil/fetch-params.sh
 ./zcutil/build.sh -j$(expr $(nproc) - 1)
 #This can take some time.
@@ -62,9 +62,9 @@ brew install binutils
 brew install protobuf
 brew install coreutils
 brew install wget
-# Clone the NFTX repo
-git clone https://github.com/nftx-sergei/nftx --branch main --single-branch
-cd nftx
+# Clone the DARK repo
+git clone https://github.com/dark-sergei/dark --branch main --single-branch
+cd dark
 ./zcutil/fetch-params.sh
 ./zcutil/build-mac.sh -j$(expr $(sysctl -n hw.ncpu) - 1)
 # This can take some time.
@@ -85,24 +85,24 @@ sudo update-alternatives --config x86_64-w64-mingw32-gcc
 sudo update-alternatives --config x86_64-w64-mingw32-g++
 # (configure to use POSIX variant)
 
-git clone https://github.com/nftx-sergei/nftx --branch main --single-branch
-cd nftx
+git clone https://github.com/dark-sergei/dark --branch main --single-branch
+cd dark
 ./zcutil/fetch-params.sh
 ./zcutil/build-win.sh -j$(expr $(nproc) - 1)
 #This can take some time.
 ```
 
-#### Launch NFTX
-Change to the NFTX src directory:
+#### Launch DARK
+Change to the DARK src directory:
 
 ```shell
-cd ~/nftx/src
+cd ~/dark/src
 ```
 
-Launch the NFTX chain command:
+Launch the DARK chain command:
 
 ```shell
-./nftxd &
+./darkd &
 ```
 
 
@@ -111,34 +111,34 @@ Launch the NFTX chain command:
 You can use the RPC below to create a new address or import a privkey you currently have.
 
 ```shell
-./nftx-cli getnewaddress
+./dark-cli getnewaddress
 ```
 
 ```shell
-./nftx-cli importprivkey
+./dark-cli importprivkey
 ```
 
 Once you have completed this, use the validateaddress RPC to find your associated pubkey.
 
 ```shell
-./nftx-cli validateaddress *INSERTYOURADDRESSHERE*
+./dark-cli validateaddress *INSERTYOURADDRESSHERE*
 ```
 
 Once you have written down your pubkey, stop the blockchain daemon.
 
 ```shell
-cd ~/nftx/src
-./nftx-cli stop
+cd ~/dark/src
+./dark-cli stop
 ```
 
 Wait a minute or so for the blockchain to stop, then relaunch the blockchain with the command below. Please remove the ** and replace them with the pubkey of the address you imported.
 
 ```shell
-cd ~/nftx/src
-./nftxd -pubkey=**YOURPUBKEYHERE** &
+cd ~/dark/src
+./darkd -pubkey=**YOURPUBKEYHERE** &
 ```
 
-You are now ready to use the NFTX software to its fullest extent.
+You are now ready to use the DARK software to its fullest extent.
 
 
 

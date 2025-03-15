@@ -128,7 +128,7 @@ HOST="$HOST" BUILD="$BUILD" NO_PROTON="$PROTON_ARG" "$MAKE" "$@" -C ./depends/ V
 
 CONFIG_SITE="$PWD/depends/$HOST/share/config.site" ./configure "$HARDENING_ARG" "$LCOV_ARG" "$TEST_ARG" "$MINING_ARG" "$PROTON_ARG" "$DEBUGGING_ARG" "$CONFIGURE_FLAGS" "$WEBSOCKETS_ARG" CXXFLAGS='-g' \
   --with-custom-bin=yes CUSTOM_BIN_NAME=dark CUSTOM_BRAND_NAME=DARK \
-  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=10 -ac_reward=100000000 -ac_blocktime=10 -ac_adaptivepow=6 -ac_cbmaturity=3 -ac_staked=30 -ac_sapling=1 -ac_pubkey=02eb9619522cb245b5b08f6d805457ce2dede07dcbe837c13cf3fd73f5f658373a -addnode=89.111.170.235'" \
+  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=10 -ac_reward=100000000 -ac_blocktime=10 -ac_adaptivepow=6 -ac_staked=30 -ac_pubkey=02eb9619522cb245b5b08f6d805457ce2dede07dcbe837c13cf3fd73f5f658373a -addnode=89.111.170.235'" \
   CUSTOM_CLIENT_ARGS='-ac_name=DARK'
 
 "$MAKE" "$@" V=1

@@ -724,9 +724,7 @@ UniValue selfimport(const UniValue& params, bool fHelp, const CPubKey& mypk)
         throw runtime_error("selfimport only works on -ac_import chains");
 
     if (fHelp || params.size() != 2)
-        throw runtime_error("selfimport destaddr amount\n"
-                  //TODO:   "or selfimport rawburntx burntxid {nvout|\"find\"} rawproof source bindtxid height} \n"
-                            "\ncreates self import coin transaction");
+        throw runtime_error("selfimport only works on -ac_import chains");
 
     destaddr = params[0].get_str();
     burnAmount = AmountFromValue(params[1]);
@@ -763,7 +761,7 @@ UniValue selfimport(const UniValue& params, bool fHelp, const CPubKey& mypk)
         CMutableTransaction templateMtx;
         // prepare self-import 'quasi-burn' tx and also create vout for import tx (in mtx.vout):
         if (GetSelfimportProof(sourceMtx, templateMtx, proofNull) < 0)
-            throw std::runtime_error("Failed creating selfimport template tx");
+            throw std::runtime_error("selfimport only works on -ac_import chains");
 
         vouts = templateMtx.vout;
         burnOut = MakeBurnOutput(burnAmount, 0xffffffff, ASSETCHAINS_SELFIMPORT, vouts, rawProofEmpty);

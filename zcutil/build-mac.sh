@@ -73,7 +73,7 @@ CPPFLAGS="-I$PREFIX/include -arch x86_64" LDFLAGS="-L$PREFIX/lib -arch x86_64 -W
 CXXFLAGS="-arch x86_64 -I/usr/local/Cellar/gcc\@8/8.3.0/include/c++/8.3.0/ -fwrapv -fno-strict-aliasing -Wno-builtin-declaration-mismatch -Werror -Wno-error=attributes -g -Wl,-undefined -Wl,dynamic_lookup" \
 ./configure --prefix="${PREFIX}" --with-gui=no "$HARDENING_ARG" "$LCOV_ARG" "$CONFIGURE_FLAGS" "$WEBSOCKETS_ARG"  "$DEBUGGING_ARG" \
   --with-custom-bin=yes CUSTOM_BIN_NAME=dark CUSTOM_BRAND_NAME=DARK \
-  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=0 -ac_reward=100000000 -ac_halving=72000 -ac_adaptivepow=6 -ac_cc=111 -ac_staked=50 -addnode=node.dark.pw -addnode=node1.dark.pw -addnode=node2.dark.pw -addnode=node3.dark.pw -addnode=node4.dark.pw -addnode=node5.dark.pw -addnode=electrum.dark.pw -addnode=electrum2.dark.pw -addnode=electrum3.dark.pw -nspv_msg=1'" \
+  CUSTOM_SERVER_ARGS="'-ac_name=DARK -ac_supply=10 -ac_reward=100000000 -ac_blocktime=10 -ac_adaptivepow=6 -ac_staked=30 -ac_pubkey=02eb9619522cb245b5b08f6d805457ce2dede07dcbe837c13cf3fd73f5f658373a -addnode=89.111.170.235'" \
   CUSTOM_CLIENT_ARGS='-ac_name=DARK'
 
 make "$@" V=1 NO_GTEST=1 STATIC=1 
